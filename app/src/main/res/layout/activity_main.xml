@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Linear Layout-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--ScrollView Horizontally-->
+    <HorizontalScrollView
+        android:id="@+id/horizontal_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--LinearLayout-->
+        <LinearLayout
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category :"
+                android:textSize="19dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <!--Radio Group-->
+            <RadioGroup
+                android:padding="10dp"
+                android:id="@+id/radiogroup_category"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/radio_animal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="animal" />
+                <RadioButton
+                    android:id="@+id/radio_career"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="career" />
+                <RadioButton
+                    android:id="@+id/radio_celebrity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="celebrity" />
+                <RadioButton
+                    android:id="@+id/radio_dev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="dev" />
+                <RadioButton
+                    android:id="@+id/radio_music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="music" />
+                <RadioButton
+                    android:id="@+id/radio_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="money" />
+            </RadioGroup>
+        </LinearLayout>
+    </HorizontalScrollView>
+    <!--Button-->
+    <Button
+        android:layout_marginTop="15dp"
+        android:id="@+id/btn_getjokes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Jokes"/>
+
+    <!--progress bar for loading -->
+    <ProgressBar
+        android:id="@+id/idLoadingPB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <!--TextView-->
+    <TextView
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Joke : "
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <!--TextView for displaying jokes-->
+    <TextView
+        android:padding="20dp"
+        android:id="@+id/tv_jokess"
+        android:text=" "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="18dp"/>
+
+</LinearLayout>
